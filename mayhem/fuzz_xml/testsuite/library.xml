@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library [<!ENTITY who "Rufus">]>
+<library name="Rufus Library">
+  <shelf id="1"><book id="a">Alpha and Omega</book><book id="b">Beta</book></shelf>
+  <shelf id="2"><book id="c">Gamma &#65;&#x42;</book></shelf>
+</library>

@@ -1,0 +1,10 @@
+project: savantenvs/rufus
+target: fuzz_bled
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bled/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bled
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_bled/fuzz_bled.dict

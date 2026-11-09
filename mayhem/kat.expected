@@ -1,0 +1,21 @@
+regex /a+b/ on "xxaaab": rc=1 m0@2 m1@6
+regex /^(foo|bar)baz$/ on "barbaz": rc=1 m0@0 m1@6 m2@0 m3@3
+regex /^(foo|bar)baz$/ on "foobar": rc=0
+regex /[0-9]+\.[0-9]*/ on "v 12.5.3": rc=1 m0@2 m1@6
+regex /(a(b)?)+c/ on "xabac": rc=1 m0@1 m1@5 m2@3 m3@4
+regex /a{2,3}/ on "caaaa": rc=1 m0@1 m1@4
+regex /(unclosed/ on "x": compile-error
+bled payload.gz: 1870 bytes sum=83c166aa head="The quick brown fox "
+bled payload.xz: 1870 bytes sum=83c166aa head="The quick brown fox "
+bled payload.bz2: 1870 bytes sum=83c166aa head="The quick brown fox "
+bled payload.lzma: 1870 bytes sum=83c166aa head="The quick brown fox "
+bled payload.zip: 1870 bytes sum=83c166aa head="The quick brown fox "
+xml error=""
+xml name=library attr=Rufus Library
+xml shelf0/book0="Alpha and Omega" id=a
+xml shelf0/book1="Beta"
+xml shelf1/book0="Gamma AB"
+xml toxml 178 bytes: <library name="Rufus Library">
+  <shelf id="1"><book id="a">Alpha and Omega</book><book id="b">Beta</book></shelf>
+  <shelf id="2"><book id="c">Gamma AB</book></shelf>
+</library>
