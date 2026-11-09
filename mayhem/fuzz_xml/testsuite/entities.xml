@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE r [<!ENTITY e "val"><!ATTLIST r a CDATA "dflt">]>
+<r a="&e;x"><c>&e; &lt;&gt;&amp;&quot;&apos;</c><![CDATA[raw <data>]]><!-- c --><?pi target data?></r>
